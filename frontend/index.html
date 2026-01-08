@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Detector - Algo Avengers</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/18610/18610170.png">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">⚡ Algo Avengers</h1>
+            <p class="tagline">Advanced Code Plagiarism Detection System</p>
+            
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Mode Toggle -->
+            <div class="mode-toggle">
+                <button class="toggle-btn active" data-mode="source">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                    </svg>
+                    Source Code Detection
+                </button>
+                <button class="toggle-btn" data-mode="text">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M4 7h16M4 12h16M4 17h10"/>
+                    </svg>
+                    Text Detection
+                </button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-wrapper">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <!-- Source Code Mode -->
+                    <div id="source-mode" class="mode-content active">
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label class="input-label">
+                                    <span class="label-text">Program 1</span>
+                                    <span class="label-info">Python Code</span>
+                                </label>
+                                <textarea 
+                                    id="program1" 
+                                    class="code-input" 
+                                    placeholder="# Paste your first Python program here...
+def example():
+    pass"
+                                    spellcheck="false"
+                                ></textarea>
+                            </div>
+
+                            <div class="input-box">
+                                <label class="input-label">
+                                    <span class="label-text">Program 2</span>
+                                    <span class="label-info">Python Code</span>
+                                </label>
+                                <textarea 
+                                    id="program2" 
+                                    class="code-input" 
+                                    placeholder="# Paste your second Python program here...
+def sample():
+    pass"
+                                    spellcheck="false"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <button id="check-source-btn" class="check-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            Check Plagiarism
+                        </button>
+                    </div>
+
+                    <!-- Text Mode (Placeholder) -->
+                    <div id="text-mode" class="mode-content">
+                        <div class="input-box">
+                            <label class="input-label">
+                                <span class="label-text">Text Input</span>
+                                <span class="label-info">Paste your text content</span>
+                            </label>
+                            <textarea 
+                                id="text-input" 
+                                class="code-input" 
+                                placeholder="Paste your text content here..."
+                                style="height: 400px;"
+                            ></textarea>
+                        </div>
+
+                        <button id="check-text-btn" class="check-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            Check Plagiarism
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <div class="output-header">
+                        <h2>Analysis Results</h2>
+                        <div class="output-status" id="status-indicator"></div>
+                    </div>
+
+                    <!-- Loader -->
+                    <div id="loader" class="loader hidden">
+                        <div class="spinner"></div>
+                        <p>Analyzing code patterns...</p>
+                        <p class="loader-subtext">This may take a few seconds</p>
+                    </div>
+
+                    <!-- Results -->
+                    <div id="results" class="results hidden">
+                        <!-- Results will be dynamically inserted here -->
+                    </div>
+
+                    <!-- Initial State -->
+                    <div id="initial-state" class="initial-state">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <h3>No Analysis Yet</h3>
+                        <p>Submit your code to see plagiarism detection results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made by RV and Algo Team © 2025-26</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

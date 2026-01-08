@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/styles.css",
+      "destination": "/frontend/styles.css"
+    },
+    {
+      "source": "/script.js",
+      "destination": "/frontend/script.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/index.html"
+    }
+  ]
+}
