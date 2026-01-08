@@ -256,4 +256,4 @@ If you encounter issues:
 - [ ] Support for more programming languages
 - [ ] Export reports as PDF
 - [ ] User authentication and history
-- [ ] Batch processing capabilities
+- [ ] Batch processing capabilities# minor update
