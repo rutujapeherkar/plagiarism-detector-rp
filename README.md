@@ -235,7 +235,7 @@ def add_numbers(x, y):
 ## 👥 Team
 
 **Algo Avengers**  
-Made by RV and Algo Team © 2025-26
+Made by Algo Team © 2025-26
 
 ---
 
