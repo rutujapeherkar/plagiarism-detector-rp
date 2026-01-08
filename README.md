@@ -1,4 +1,4 @@
-# 🔍 Plagiarism Detection System
+# 🔍 Plagiarism Detection System By
 ## Algo Avengers Team
 
 A professional code plagiarism detection system using AST analysis, CFG matching, and CodeBERT semantic embeddings.
